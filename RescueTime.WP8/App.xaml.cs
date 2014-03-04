@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
@@ -54,6 +55,7 @@ namespace MassivePixel.RescueTime.WP8
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+            GoogleAnalytics.EasyTracker.Current.SetContext(this);
         }
 
         // Code to execute when the application is launching (eg, from Start)
@@ -115,6 +117,8 @@ namespace MassivePixel.RescueTime.WP8
             // screen to remain active until the application is ready to render.
             RootFrame = new PhoneApplicationFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
+            
+            RootFrame.Navigated += ReportWhenNavigated;
 
             // Handle navigation failures
             RootFrame.NavigationFailed += RootFrame_NavigationFailed;
@@ -124,6 +128,12 @@ namespace MassivePixel.RescueTime.WP8
 
             // Ensure we don't initialize again
             _phoneApplicationInitialized = true;
+        }
+
+        private void ReportWhenNavigated(object sender, NavigationEventArgs navigationEventArgs)
+        {
+            var view = Path.GetFileNameWithoutExtension(navigationEventArgs.Uri.OriginalString);
+            GoogleAnalytics.EasyTracker.GetTracker().SendView(view);
         }
 
         // Do not add any additional code to this method
