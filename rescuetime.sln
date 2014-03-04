@@ -12,16 +12,44 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{417726
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueTime.WP8", "RescueTime.WP8\RescueTime.WP8.csproj", "{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E243FA81-2F7D-418E-9013-41507A0EB2F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|ARM.Build.0 = Debug|ARM
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|x86.ActiveCfg = Debug|x86
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|x86.Build.0 = Debug|x86
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Debug|x86.Deploy.0 = Debug|x86
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|ARM.ActiveCfg = Release|ARM
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|ARM.Build.0 = Release|ARM
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|ARM.Deploy.0 = Release|ARM
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|x86.ActiveCfg = Release|x86
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|x86.Build.0 = Release|x86
+		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
