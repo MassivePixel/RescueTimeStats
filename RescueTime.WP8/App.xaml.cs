@@ -4,6 +4,9 @@ using System.IO;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
+using GalaSoft.MvvmLight.Ioc;
+using MassivePixel.RescueTime.Common.Platform;
+using MassivePixel.RescueTime.WP8.Platform;
 using MassivePixel.RescueTime.WP8.Resources;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
@@ -56,6 +59,7 @@ namespace MassivePixel.RescueTime.WP8
             }
 
             GoogleAnalytics.EasyTracker.Current.SetContext(this);
+            SimpleIoc.Default.Register<IAnalytics>(() => new Analytics(), true);
         }
 
         // Code to execute when the application is launching (eg, from Start)
@@ -117,7 +121,7 @@ namespace MassivePixel.RescueTime.WP8
             // screen to remain active until the application is ready to render.
             RootFrame = new PhoneApplicationFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
-            
+
             RootFrame.Navigated += ReportWhenNavigated;
 
             // Handle navigation failures

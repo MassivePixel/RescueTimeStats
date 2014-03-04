@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{417726
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueTime.WP8", "RescueTime.WP8\RescueTime.WP8.csproj", "{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RescueTime.Common", "RescueTime.Common\RescueTime.Common.csproj", "{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,14 @@ Global
 		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|x86.ActiveCfg = Release|x86
 		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|x86.Build.0 = Release|x86
 		{A3AA6571-0FFC-4FDA-AE98-3E5E9EBBB06F}.Release|x86.Deploy.0 = Release|x86
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Release|ARM.ActiveCfg = Release|Any CPU
+		{63DDD7B3-DAAB-43CD-98CD-DF88A45D57F6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
