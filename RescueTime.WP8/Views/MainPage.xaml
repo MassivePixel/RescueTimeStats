@@ -28,7 +28,8 @@
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
+            <TextBlock Text="{Binding Summary.Productivity,StringFormat=\{0:0\}% productive}"
+                       Style="{StaticResource PhoneTextExtraLargeStyle}"></TextBlock>
         </Grid>
 
         <Grid Visibility="{Binding IsWorking,Converter={StaticResource BooleanToVisibilityConverter}}"
