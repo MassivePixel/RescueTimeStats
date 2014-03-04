@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
+using console.test.Data;
+using Newtonsoft.Json;
 
 namespace console.test
 {
@@ -12,7 +16,19 @@ namespace console.test
             try
             {
                 var result = client.GetStringAsync(uri).Result;
-                Console.WriteLine(result);
+
+                var obj = JsonConvert.DeserializeObject<DefaultResponse>(result);
+                var rows = new List<RowInfo>();
+                foreach (var row in obj.rows)
+                    rows.Add(new RowInfo(row));
+
+                var times = rows.GroupBy(i => i.Productivity)
+                    .ToDictionary(g => g.Key, g => TimeSpan.FromSeconds(g.Sum(i => i.TimeSpent)));
+                var total = times.Sum(i => i.Value.TotalSeconds);
+                foreach (var time in times)
+                {
+                    Console.WriteLine("{0} {1} {2:0.00}%", time.Key, time.Value, (float)time.Value.TotalSeconds / (float)total * 100);
+                }
             }
             catch (Exception ex)
             {
