@@ -27,9 +27,43 @@
                        Margin="12,0"/>
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="{Binding Summary.Productivity,StringFormat=\{0:0\}% productive}"
-                       Style="{StaticResource PhoneTextExtraLargeStyle}"></TextBlock>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Grid.RowSpan="2">
+            <StackPanel VerticalAlignment="Center">
+                <Grid x:Name="PieChart"
+                      Margin="0,12"
+                      HorizontalAlignment="Center">
+                    
+                    <TextBlock Text="{Binding Summary.Productivity,StringFormat=\{0:0\}}"
+                               Foreground="White"
+                               Margin="0"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="216"
+                               FontFamily="Segoe WP Light">
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform  TranslateY="-25" />
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    
+                    <!--<Path Stroke="Green" StrokeThickness="25" Width="432" Height="432">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathFigure StartPoint="216 0">
+                                    <ArcSegment Point="87.7002255216676,389.767568518435"
+                                                Size="216 216"
+                                                SweepDirection="ClockWise" IsLargeArc="True" />
+                                    <ArcSegment Point="39.3653511424912,91.6770301875612"
+                                                Size="216 216"
+                                                SweepDirection="ClockWise" />
+                                    <ArcSegment Point="104.241999621606,31.1591242408139"
+                                                Size="216 216"
+                                                SweepDirection="ClockWise" />
+                                </PathFigure>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>-->
+                </Grid>
+            </StackPanel>
         </Grid>
 
         <Grid Visibility="{Binding IsWorking,Converter={StaticResource BooleanToVisibilityConverter}}"
